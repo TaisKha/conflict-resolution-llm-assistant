@@ -50,6 +50,7 @@ def choose_from_suggestions_using_summary(conversation_summary: str, suggestions
   return send_prompt(prompt)
 
 def parse_dialog(dialogue_human_readable: str) -> list[tuple[str, str]]:
+  dialogue_human_readable = dialogue_human_readable.strip()
   # Split the dialogue into individual lines
   dialogue_lines = dialogue_human_readable.split('\n')
 
@@ -62,6 +63,7 @@ def parse_dialog(dialogue_human_readable: str) -> list[tuple[str, str]]:
   return dialogue_tuples    
 
 def get_suggestion_from_original_dialog(dialogue_human_readable: str) -> str:
+
   # Parse the dialogue into a list of tuples
   dialogue_tuples = parse_dialog(dialogue_human_readable)
 
@@ -75,6 +77,7 @@ def get_suggestion_from_original_dialog(dialogue_human_readable: str) -> str:
 
 # Alternative version of the function get_suggestion_from_original_dialog
 def get_suggestion_using_summary(dialogue_human_readable: str) -> str:
+  
   # Parse the dialogue into a list of tuples
   dialogue_tuples = parse_dialog(dialogue_human_readable)
 
@@ -88,21 +91,3 @@ def get_suggestion_using_summary(dialogue_human_readable: str) -> str:
   suggestion = choose_from_suggestions_using_summary(dialogue_summary, suggestions)
 
   return suggestion
-  
-
-#   messages_set_2 = [("Emily", "John, we need to pivot our business strategy."),
-#     ("John", "That's too risky, Emily. Our current approach is solid."),]
-#   messages_set_1 = [("Alice", "Bob, you never do your share of the chores!"),
-#     ("Bob", "I do plenty around here! You're just being stupid and unreasonable."),
-#     ("Alice", "Lol, you're always calling me stupid. Can't you think of a better insult?"),
-# ]
-#   messages_set_3 = [("Sarah", "David, your objections are stalling progress on the project!"),
-#     ("David", "I have valid concerns, Sarah. We need to address them.")]
-  
-
-
-
-  
-
-
-""

@@ -1,56 +1,103 @@
 /* style.css */
 
 body {
-    font-family: sans-serif;
-  }
-  
-  header {
-    background-color: #f2f2f2;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+    font-size: 14px; /* Adjusted font size */
+    min-height: 100vh; /* Ensures the body takes up at least the full viewport height */
+    display: flex;
+    flex-direction: column; /* Allows the footer to stay at the bottom of the page */
+}
+
+.header {
+    background-color: #82caaf; /* Soft green */
+    color: #333;
     padding: 20px;
-  }
-  
-  .header h1 {
-    font-size: 24px;
-    margin-bottom: 0;
-  }
-  
-  .suggestions {
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+    font-size: 28px; /* Adjusted font size */
+    margin: 0;
+    color: #4d4d4d; /* Dark grey */
+}
+
+.suggestions {
     padding: 20px;
-    border: 1px solid #ccc;
-    margin-bottom: 20px;
-  }
-  
-  .suggestions-list {
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: auto; /* Pushes the suggestions section to the top */
+}
+
+.suggestions h2 {
+    font-size: 20px; /* Adjusted font size */
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #4d4d4d; /* Dark grey */
+}
+
+.suggestions-list {
     list-style: none;
-  }
-  
-  .suggestions-list li {
+    padding: 0;
+}
+
+.suggestions-list li {
     margin-bottom: 10px;
-  }
-  
-  .input-form {
+    padding: 12px;
+    border-radius: 6px;
+    background-color: #f7f7f7;
+    border: 1px solid #eee;
+}
+
+.input-form {
     padding: 20px;
-  }
-  
-  .input-textarea {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Added space below input form */
+}
+
+.input-textarea {
     width: 100%;
-    height: 150px;
-  }
-  
-  .submit-button {
-    background-color: #007bff;
-    color: white;
-    padding: 8px 16px;
+    height: 120px; /* Reduced height */
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    resize: none;
+    font-size: 14px; /* Adjusted font size */
+}
+
+.submit-button {
+    background-color: #82caaf; /* Soft green */
+    color: #333;
+    padding: 12px 24px;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
     cursor: pointer;
-  }
-  
-  .response {
+    font-size: 16px; /* Adjusted font size */
+    transition: background-color 0.3s ease;
+    margin-top: 20px; /* Added space on top */
+}
+
+.submit-button:hover {
+    background-color: #6ca18f; /* Darker green on hover */
+}
+
+.response {
     padding: 20px;
-  }
-  
-  .response-text {
-    font-size: 16px;
-  }
-  
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: auto; /* Pushes the response section to the bottom */
+    margin-bottom: 20px; /* Add margin at the bottom */
+}
+
+.response-text {
+    font-size: 16px; /* Adjusted font size */
+    line-height: 1.6;
+}
