@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exploring LLMs' Capacity to Select Contextually Appropriate Suggestions for Conflict Resolution </title>
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+</head>
+<body>
+  <header class="header">
+    <h1>Exploring LLMs' Capacity to Select Contextually Appropriate Suggestions for Conflict Resolution </h1>
+  </header>
+
+  <section class="suggestions">
+    <h2>Suggestions to choose from</h2>
+    <ul class="suggestions-list">
+      {% for suggestion in suggestions %}
+        <li class="suggestion">{{ suggestion }}</li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section class="input-form">
+    <h2>Dialog</h2>
+    <form action="/" method="post">
+      <textarea name="user_input" class="input-textarea" rows="4" cols="50"></textarea>
+      <br>
+      <button type="submit" class="submit-button">Submit</button>
+    </form>
+  </section>
+
+  {% if response %}
+  <section class="response">
+    <h2>Response from LLM</h2>
+    <p class="response-text">{{ response }}</p>
+  </section>
+  {% endif %}
+</body>
+</html>
